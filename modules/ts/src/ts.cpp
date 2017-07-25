@@ -757,7 +757,7 @@ std::string findDataFile(const std::string& relative_path, bool required)
 #define TEST_TRY_FILE_WITH_PREFIX(prefix) \
 { \
     std::string path = path_join(prefix, relative_path); \
-    /*printf("Trying %s\n", path.c_str());*/ \
+    printf("Trying %s\n", path.c_str()); \
     FILE* f = fopen(path.c_str(), "rb"); \
     if(f) { \
        fclose(f); \
